@@ -428,7 +428,6 @@ public class CircularFifoQueueTest<E> extends AbstractQueueTest<E> {
             b.add(null);
             fail();
         } catch (final NullPointerException ex) {
-            assertEquals("Attempted to add null object to queue",ex.getMessage());
             return;
         }
         fail();
@@ -446,7 +445,6 @@ public class CircularFifoQueueTest<E> extends AbstractQueueTest<E> {
         try {
             fifo.get(5);
         } catch (final NoSuchElementException ex) {
-            assertEquals("The specified index (5) is outside the available range [0, 5)",ex.getMessage());
             return;
         }
         fail();
@@ -464,7 +462,6 @@ public class CircularFifoQueueTest<E> extends AbstractQueueTest<E> {
         try {
             fifo.get(-2);
         } catch (final NoSuchElementException ex) {
-            assertEquals("The specified index (-2) is outside the available range [0, 5)",ex.getMessage());
             return;
         }
         fail();
